@@ -1,0 +1,21 @@
+{
+    "params":
+    {
+        "local_uri":"mysql://root:@localhost/blog_db",
+        "prod_uri":"mysql://SatyamToriya:satyam1622@/blog_db",
+        "local_server":"True",
+        "blog_name":"The Coding Legend ",
+        "tagline":"A Blog Liked By Programmer",
+        "fb_url":"https://facebook.com/thecodinglegend",
+        "twit_url":"https://twitter.com/thecodinglegend",
+        "github_url":"https://github.com/thecodinglegend",
+        "gmail-user":"yourname@gmail.com",
+        "gmail-password":"yourpassword",
+        "about_me":"Hello , I Am Satyam Toriya I have Completed B.E. Graduation in Computer Science ,  Skills Like Python , C Language , HTML , CSS and some Other Technical Skills which I was Learn in College, Also I completed Many Projects using My Skills . I Love Programming... ",
+        "num_of_post":2,
+        "admin_logo":"admin_logo.jpg",
+        "admin_username":"satyam",
+        "admin_password":"satyam@password",
+        "upload_path":"D:\\projects and material\\Flask with python\\static\\img"
+    }
+}

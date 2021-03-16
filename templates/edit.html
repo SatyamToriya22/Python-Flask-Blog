@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{url_for('static',filename='img/admin_bg.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin Panel</h1>
+            <span class="subheading">Manage Your Posts and Change Them</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+      <h1>Add/Edit Post<h1>       
+
+        <form action="/edit/{{posts.slug}}" method ="post" name="sentMessage" id="contactForm" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Title</label>
+              <input type="text" class="form-control" name="title" placeholder="Title" id="title"  required data-validation-required-message="Please enter Title." value={{posts.title}}>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Sub-Heading</label>
+              <input type="email" class="form-control" name="subheading" placeholder="Sub Heading" id="subheading"  required data-validation-required-message="Please enter subheading"  value={{posts.subheading}}>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Date</label>
+              <input type="tel" class="form-control" name="date" placeholder="Date" id="Date"  required data-validation-required-message="Please enter Date." value={{posts.date}}>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Image Filename</label>
+              <input rows="5" class="form-control" name="img_file" placeholder="Image File Name" id="img_file"  required data-validation-required-message="Please enter a image file name" value={{posts.img_file}}>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Posted By</label>
+              <input rows="5" class="form-control" name="posted_by" placeholder="Posted By" id="post_by"  required data-validation-required-message="Please enter a posted by." value={{posts.posted_by}}>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Slug</label>
+              <input rows="5" class="form-control" name="slug" placeholder="Slug" id="slug" required data-validation-required-message="Please enter slug." value={{posts.slug}}>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <h2> Content <h2>
+          <hr>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Heading</label>
+              <input rows="5" class="form-control" name="heading" placeholder="Heading" id="heading"  required data-validation-required-message="Please enter heading." value={{posts_content.heading}}>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Paragraph</label>
+              <input rows="5" class="form-control" name="paragraph" placeholder="Paragraph" id="paragraph" required data-validation-required-message="Please enter paragraph." value={{posts_content.paragraph}}>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>List Items</label>
+              <input rows="5" class="form-control" name="list_items" placeholder="List Items" id="list_items"  required data-validation-required-message="Please enter list." value={{posts_content.list_items}}>
+              <p class="help-block text-danger">If List Items Then Write Items Seperated By comma (,)</p>
+            </div>
+          </div>
+
+          <br>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+        </form>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
