@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, session, redirect
 from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from werkzeug.utils import secure_filename
 from datetime import datetime
 import json
@@ -27,7 +28,9 @@ mail = Mail(app)
 #     app.config["SQLALCHEMY_DATABASE_URI"] = params['prod_uri']
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://pyidfsdxdumxud:0ff71550978cf8de3e9dc0c8f519f6f44d39a6e9313e6a5f91c740fde7198e01@ec2-34-195-233-155.compute-1.amazonaws.com:5432/d4agmi32hmi56r"
 
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
+db.init_app(app)
+migrate = Migrate(app, db)
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
