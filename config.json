@@ -2,7 +2,7 @@
     "params":
     {
         "local_uri":"mysql://root:@localhost/blog_db",
-        "prod_uri":"mysql://SatyamToriya:satyam1622@/blog_db",
+        "prod_uri":"mysql://<username>:<password>@<server>/<database_name>",
         "local_server":"True",
         "blog_name":"The Coding Legend ",
         "tagline":"A Blog Liked By Programmer",
@@ -11,7 +11,7 @@
         "github_url":"https://github.com/thecodinglegend",
         "gmail-user":"yourname@gmail.com",
         "gmail-password":"yourpassword",
-        "about_me":"Hello , I Am Satyam Toriya I have Completed B.E. Graduation in Computer Science ,  Skills Like Python , C Language , HTML , CSS and some Other Technical Skills which I was Learn in College, Also I completed Many Projects using My Skills . I Love Programming... ",
+        "about_me":"Hello , I Am Satyam Toriya I have Completed B.E. Graduation in Computer Science ,  Skills Like Python , C Language , HTML , CSS and some Other Technical Skills which I was Learn in College, and Also I completed Many Projects using These Skills . I Love Programming... ",
         "num_of_post":2,
         "admin_logo":"admin_logo.jpg",
         "admin_username":"satyam",
